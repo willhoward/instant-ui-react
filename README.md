@@ -1,2 +1,3 @@
-# instant-ui
-React component library
+# instant-ui-react
+
+Installable React components.
