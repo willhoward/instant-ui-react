@@ -9,6 +9,7 @@
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
+    "setup": "husky install && chmod ug+x .husky/*",
     "test": "npx tsc --noEmit && jest",
     "pre-commit": "prettier . --write --ignore-unknown",
     "pre-push": "npm run test"
