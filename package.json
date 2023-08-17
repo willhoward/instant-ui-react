@@ -1,6 +1,6 @@
 {
   "name": "instant-ui-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Instant UI React components",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -9,9 +9,10 @@
   "scripts": {
     "watch": "parcel watch",
     "build": "parcel build",
+    "format": "prettier . --write",
     "setup": "husky install && chmod ug+x .husky/*",
     "test": "npx tsc --noEmit && jest",
-    "pre-commit": "prettier . --write --ignore-unknown",
+    "pre-commit": "prettier . --check --ignore-unknown",
     "pre-push": "npm run test"
   },
   "author": "willhoward",
