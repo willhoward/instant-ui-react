@@ -7,7 +7,7 @@ import { ButtonProps } from "../Button.types";
 const mockProps: ButtonProps = {
   text: "Example",
   disabled: false,
-  priority: "primary",
+  primary: true,
   onClick: () => null,
 };
 

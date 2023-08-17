@@ -4,7 +4,6 @@ exports[`App should display pass in number 1`] = `
 <div>
   <button
     class="sc-bcPKhP kQiXYg"
-    priority="primary"
     type="button"
   >
     Example
