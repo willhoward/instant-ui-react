@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { Button } from "../Button";
 import { ButtonProps } from "../Button.types";
+import { ThemeProvider } from "../../Theme/Theme";
 
 const mockProps: ButtonProps = {
   text: "Example",
@@ -13,7 +14,11 @@ const mockProps: ButtonProps = {
 
 describe("App", function () {
   it("should display pass in number", function () {
-    render(<Button {...mockProps} />);
+    render(
+      <ThemeProvider>
+        <Button {...mockProps} />
+      </ThemeProvider>,
+    );
 
     expect(screen.getByTestId("button")).toHaveTextContent("Example");
   });
