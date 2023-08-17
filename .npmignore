@@ -1,0 +1,11 @@
+/.github
+/.husky
+/.parcel-cache
+/node_modules
+.babelrc
+.gitignore
+.parcelrc
+.prettierignore
+.prettierrc
+jest.config.json
+tsconfig.json
