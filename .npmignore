@@ -2,6 +2,7 @@
 /.husky
 /.parcel-cache
 /node_modules
+/src
 .babelrc
 .gitignore
 .parcelrc

@@ -5,14 +5,14 @@ import { ButtonProps } from "./Button.types";
 export function Button({
   text,
   disabled,
-  priority = "primary",
+  primary = true,
   onClick,
 }: ButtonProps) {
   return (
     <StyledButton
       type="button"
       disabled={disabled}
-      priority={priority}
+      primary={primary}
       onClick={onClick}
     >
       {text}

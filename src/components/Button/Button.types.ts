@@ -2,7 +2,7 @@ import { MouseEventHandler } from "react";
 
 export interface ButtonProps {
   text?: string;
-  priority?: "primary" | "secondary" | "tertiary";
+  primary?: boolean;
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
