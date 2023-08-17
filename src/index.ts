@@ -1,6 +1,7 @@
+import { ThemeProvider, useTheme } from "./components/Theme/Theme";
 import { Button } from "./components/Button/Button";
 
 /**
- * Export all components here.
+ * Export theme and all components here.
  */
-export { Button };
+export { ThemeProvider, useTheme, Button };

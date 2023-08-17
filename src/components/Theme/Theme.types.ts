@@ -1,13 +1,7 @@
 import { ReactNode } from "react";
 
 export interface ThemeContextType {
-  colors: {
-    black: string;
-    darkGray: string;
-    midGray: string;
-    lightGray: string;
-    white: string;
-  };
+  black: string;
 }
 
 export interface ThemeProviderProps {
