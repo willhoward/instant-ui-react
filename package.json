@@ -20,7 +20,8 @@
     "setup": "husky install && chmod ug+x .husky/*",
     "test": "npx tsc --noEmit && jest",
     "pre-commit": "prettier . --check --ignore-unknown",
-    "pre-push": "npm run test"
+    "pre-push": "npm run test",
+    "prepublish": "npm run build"
   },
   "author": "willhoward",
   "license": "MIT",
