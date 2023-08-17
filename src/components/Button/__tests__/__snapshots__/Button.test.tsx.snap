@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should display pass in number 1`] = `
+<button
+  class="sc-bcPKhP dtcrqo"
+  priority="primary"
+  type="button"
+>
+  Example
+</button>
+`;
