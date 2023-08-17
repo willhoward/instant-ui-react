@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import { Button } from "../Button";
-import { ButtonProps } from "../Button.types";
-import { ThemeProvider } from "../../Theme/Theme";
+import { Button } from "./Button";
+import { ButtonProps } from "./Button.types";
+import { ThemeProvider } from "../Theme/Theme";
 
 const mockProps: ButtonProps = {
   text: "Example",
