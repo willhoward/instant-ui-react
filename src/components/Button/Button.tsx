@@ -14,6 +14,7 @@ export function Button({
       disabled={disabled}
       primary={primary}
       onClick={onClick}
+      data-testid="button"
     >
       {text}
     </StyledButton>

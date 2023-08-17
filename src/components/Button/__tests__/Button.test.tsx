@@ -13,8 +13,8 @@ const mockProps: ButtonProps = {
 
 describe("App", function () {
   it("should display pass in number", function () {
-    const { container } = render(<Button {...mockProps} />);
+    render(<Button {...mockProps} />);
 
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId("button")).toHaveTextContent("Example");
   });
 });
