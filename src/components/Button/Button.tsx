@@ -1,36 +1,37 @@
 import React from "react";
-import styled from "styled-components";
 import { ButtonProps } from "./Button.types";
 import { useTheme } from "../Theme/Theme";
 
 export function Button({
+  type = "button",
   text,
-  disabled,
+  disabled = false,
   primary = true,
   onClick,
+  fullWidth = false,
 }: ButtonProps) {
   const { black, lightGray, white } = useTheme();
 
-  const StyledButton = styled.button<ButtonProps>`
-    height: 42px;
-    border: none;
-    padding: 0 12px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    background: ${({ primary }) => (primary ? white : black)};
-    border: 1px solid ${({ primary }) => (primary ? white : lightGray)};
-  `;
+  const buttonStyle = {
+    width: fullWidth ? "100%" : "auto",
+    height: "42px",
+    padding: "0 12px",
+    borderRadius: "6px",
+    fontSize: "14px",
+    cursor: "pointer",
+    background: primary ? white : black,
+    border: `1px solid ${primary ? white : lightGray}`,
+    color: primary ? black : lightGray,
+  };
 
   return (
-    <StyledButton
-      type="button"
+    <button
+      style={buttonStyle}
+      type={type}
       disabled={disabled}
-      primary={primary}
       onClick={onClick}
-      data-testid="button"
     >
       {text}
-    </StyledButton>
+    </button>
   );
 }
