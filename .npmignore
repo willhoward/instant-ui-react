@@ -5,6 +5,4 @@
 .babelrc
 .gitignore
 .parcelr
-jest.config.js
-jest.setup.js
 .eslintrc.json
