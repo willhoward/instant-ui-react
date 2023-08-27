@@ -23,6 +23,10 @@
     "rules": {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "react/button-has-type": [0],
-        "quotes": [2, "single", { "avoidEscape": true }]
+        "react/jsx-indent": ["error", "tab"],
+        "react/jsx-indent-props": ["error", "tab"],
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "indent": ["error", "tab"],
+        "no-tabs": [0]
     }
 }

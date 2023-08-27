@@ -1,12 +1,10 @@
 /.github
-/.husky
 /.parcel-cache
 /node_modules
 /src
 .babelrc
 .gitignore
-.parcelrc
-.prettierignore
-.prettierrc
-jest.config.json
-tsconfig.json
+.parcelr
+jest.config.js
+jest.setup.js
+.eslintrc.json
