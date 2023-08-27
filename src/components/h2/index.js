@@ -1,22 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledH2 = styled.h2`
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.white};
+  margin: 0;
+`;
 
 function H2({ children }) {
-  const { white } = useContext(ThemeContext);
-
-  const style = {
-    fontSize: '24px',
-    lineHeight: '36px',
-    fontWeight: 600,
-    color: white,
-    margin: 0,
-  };
-
   return (
-    <h2 style={style}>
+    <StyledH2>
       {children}
-    </h2>
+    </StyledH2>
   );
 }
 

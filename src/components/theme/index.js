@@ -1,4 +1,5 @@
-import React, { createContext, useMemo } from 'react';
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import propTypes from 'prop-types';
 
 const defaultTheme = {
@@ -10,22 +11,20 @@ const defaultTheme = {
   white: '#FFFFFF',
 };
 
-export const ThemeContext = createContext(defaultTheme);
-
-export function ThemeProvider({ children }) {
-  const value = useMemo(() => defaultTheme, [defaultTheme]);
-
+function InstantThemeProvider({ children }) {
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeProvider theme={defaultTheme}>
       {children}
-    </ThemeContext.Provider>
+    </ThemeProvider>
   );
 }
 
-ThemeProvider.propTypes = {
+export default InstantThemeProvider;
+
+InstantThemeProvider.propTypes = {
   children: propTypes.node,
 };
 
-ThemeProvider.defaultProps = {
+InstantThemeProvider.defaultProps = {
   children: null,
 };

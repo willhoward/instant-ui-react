@@ -1,20 +1,36 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledFlex = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 12px;
+`;
+
+const StyledFlexGrow = styled.div`
+  box-sizing: border-box;
+  flex: 1 1 auto;
+`;
+
+const StyledFlexShrink = styled.div`
+  box-sizing: border-box;
+  flex: 0 0 content;
+`;
+
+const StyledFlexEqual = styled.div`
+  box-sizing: border-box;
+  flex: 1 0 0;
+`;
 
 export function Flex({ children }) {
-  const style = {
-    boxSizing: 'border-box',
-    width: '100%',
-    display: 'flex',
-    justifyItems: 'center',
-    alignItems: 'center',
-    gap: '12px',
-  };
-
   return (
-    <div style={style}>
+    <StyledFlex>
       {children}
-    </div>
+    </StyledFlex>
   );
 }
 
@@ -27,15 +43,10 @@ Flex.defaultProps = {
 };
 
 export function FlexGrow({ children }) {
-  const style = {
-    boxSizing: 'border-box',
-    flex: '1 1 auto',
-  };
-
   return (
-    <div style={style}>
+    <StyledFlexGrow>
       {children}
-    </div>
+    </StyledFlexGrow>
   );
 }
 
@@ -48,15 +59,10 @@ FlexGrow.defaultProps = {
 };
 
 export function FlexShrink({ children }) {
-  const style = {
-    boxSizing: 'border-box',
-    flex: '0 0 content',
-  };
-
   return (
-    <div style={style}>
+    <StyledFlexShrink>
       {children}
-    </div>
+    </StyledFlexShrink>
   );
 }
 
@@ -69,15 +75,10 @@ FlexShrink.defaultProps = {
 };
 
 export function FlexEqual({ children }) {
-  const style = {
-    boxSizing: 'border-box',
-    flex: '1 0 0',
-  };
-
   return (
-    <div style={style}>
+    <StyledFlexEqual>
       {children}
-    </div>
+    </StyledFlexEqual>
   );
 }
 

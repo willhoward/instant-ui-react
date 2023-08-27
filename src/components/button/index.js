@@ -1,6 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledButton = styled.button`
+  box-sizing: border-box;
+  width: ${({ $fullWidth }) => ($fullWidth ? '100%' : 'auto')};
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  background: ${({ theme, $primary }) => ($primary ? theme.white : theme.darkestGray)};
+  border: 1px solid ${({ theme, $primary }) => ($primary ? theme.white : theme.lightGray)};
+  color: ${({ theme, $primary }) => ($primary ? theme.black : theme.lightestGray)};
+`;
 
 function Button({
   type,
@@ -10,33 +24,16 @@ function Button({
   onClick,
   fullWidth,
 }) {
-  const {
-    black, darkestGray, lightGray, lightestGray, white,
-  } = useContext(ThemeContext);
-
-  const style = {
-    boxSizing: 'border-box',
-    width: fullWidth ? '100%' : 'auto',
-    height: '42px',
-    padding: '0 12px',
-    borderRadius: '6px',
-    fontSize: '14px',
-    fontWeight: 400,
-    cursor: disabled ? 'not-allowed' : 'pointer',
-    background: primary ? white : darkestGray,
-    border: `1px solid ${primary ? white : lightGray}`,
-    color: primary ? black : lightestGray,
-  };
-
   return (
-    <button
-      style={style}
+    <StyledButton
       type={type}
       disabled={disabled}
       onClick={onClick}
+      $primary={primary}
+      $fullWidth={fullWidth}
     >
       {text}
-    </button>
+    </StyledButton>
   );
 }
 
@@ -55,7 +52,7 @@ Button.defaultProps = {
   type: 'button',
   text: '',
   disabled: false,
-  primary: true,
+  primary: false,
   onClick: () => null,
   fullWidth: false,
 };

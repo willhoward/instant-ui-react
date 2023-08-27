@@ -1,24 +1,22 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledCard = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 24px;
+  border: 1px solid ${({ theme }) => theme.lightGray};
+  border-radius: 6px;
+  background: ${({ theme }) => theme.black};
+`;
 
 function Card({ children }) {
-  const { black, lightGray } = useContext(ThemeContext);
-
-  const style = {
-    boxSizing: 'border-box',
-    width: '100%',
-    height: 'auto',
-    padding: '24px',
-    border: `1px solid ${lightGray}`,
-    borderRadius: '6px',
-    background: black,
-  };
-
   return (
-    <div style={style}>
+    <StyledCard>
       {children}
-    </div>
+    </StyledCard>
   );
 }
 

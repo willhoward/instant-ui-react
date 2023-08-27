@@ -1,22 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledPage = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background: ${({ theme }) => theme.darkestGray};
+  padding: 48px 24px;
+`;
 
 function Page({ children }) {
-  const { darkestGray } = useContext(ThemeContext);
-
-  const style = {
-    boxSizing: 'border-box',
-    width: '100%',
-    height: 'auto',
-    background: darkestGray,
-    padding: '48px 24px',
-  };
-
   return (
-    <div style={style}>
+    <StyledPage>
       {children}
-    </div>
+    </StyledPage>
   );
 }
 

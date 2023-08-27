@@ -1,18 +1,19 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledContainer = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+`;
 
 function Container({ children }) {
-  const style = {
-    boxSizing: 'border-box',
-    width: '100%',
-    maxWidth: '1000px',
-    margin: '0 auto',
-  };
-
   return (
-    <div style={style}>
+    <StyledContainer>
       {children}
-    </div>
+    </StyledContainer>
   );
 }
 

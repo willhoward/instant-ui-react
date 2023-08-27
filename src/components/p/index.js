@@ -1,22 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledP = styled.p`
+  font-size: 14px;
+  font-weight: 400;
+  color: ${({ theme }) => theme.lightestGray};
+  line-height: 24px;
+  margin: 0;
+`;
 
 function P({ children }) {
-  const { lightestGray } = useContext(ThemeContext);
-
-  const style = {
-    fontSize: '14px',
-    fontWeight: 400,
-    color: lightestGray,
-    lineHeight: '24px',
-    margin: 0,
-  };
-
   return (
-    <p style={style}>
+    <StyledP>
       {children}
-    </p>
+    </StyledP>
   );
 }
 

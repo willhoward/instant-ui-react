@@ -1,23 +1,21 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledHero = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background: ${({ theme }) => theme.black};
+  padding: 48px 24px;
+  border-bottom: 1px solid ${({ theme }) => theme.lightGray};
+`;
 
 function Hero({ children }) {
-  const { black, lightGray } = useContext(ThemeContext);
-
-  const style = {
-    boxSizing: 'border-box',
-    width: '100%',
-    height: 'auto',
-    background: black,
-    padding: '48px 24px',
-    borderBottom: `1px solid ${lightGray}`,
-  };
-
   return (
-    <div style={style}>
+    <StyledHero>
       {children}
-    </div>
+    </StyledHero>
   );
 }
 

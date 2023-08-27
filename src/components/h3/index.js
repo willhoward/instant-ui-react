@@ -1,22 +1,20 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import propTypes from 'prop-types';
-import { ThemeContext } from '../theme';
+import styled from 'styled-components';
+
+const StyledH3 = styled.h3`
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  color: ${({ theme }) => theme.lightestGray};
+  margin: 0;
+`;
 
 function H3({ children }) {
-  const { lightestGray } = useContext(ThemeContext);
-
-  const style = {
-    fontSize: '18px',
-    lineHeight: '30px',
-    fontWeight: 600,
-    color: lightestGray,
-    margin: 0,
-  };
-
   return (
-    <h3 style={style}>
+    <StyledH3>
       {children}
-    </h3>
+    </StyledH3>
   );
 }
 

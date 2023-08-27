@@ -1,4 +1,4 @@
-import { ThemeProvider } from './components/theme';
+import InstantThemeProvider from './components/theme';
 import Button from './components/button';
 import Header from './components/header';
 import Hero from './components/hero';
@@ -18,7 +18,7 @@ import Spacer from './components/spacer';
  * Export theme and all components here.
  */
 export {
-  ThemeProvider,
+  InstantThemeProvider,
   Button,
   Header,
   Flex,
