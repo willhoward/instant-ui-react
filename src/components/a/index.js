@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledA = styled.a`
+	font-family: ${({ theme }) => theme.fontFamily};
 	font-size: 14px;
 	font-weight: 400;
 	color: ${({ theme }) => theme.lightestGray};

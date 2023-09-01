@@ -27,6 +27,7 @@
         "react/jsx-indent-props": ["error", "tab"],
         "quotes": [2, "single", { "avoidEscape": true }],
         "indent": ["error", "tab"],
-        "no-tabs": [0]
+        "no-tabs": [0],
+        "import/no-unresolved": ["error", { "ignore": ["^react$", "^react-dom$"] }]
     }
 }

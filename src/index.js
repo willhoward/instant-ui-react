@@ -14,6 +14,8 @@ import A from './components/a';
 import Container from './components/container';
 import Card from './components/card';
 import Spacer from './components/spacer';
+import Code from './components/code';
+import Image from './components/image';
 
 /**
  * Export theme and all components here.
@@ -36,4 +38,6 @@ export {
 	Container,
 	Card,
 	Spacer,
+	Code,
+	Image,
 };

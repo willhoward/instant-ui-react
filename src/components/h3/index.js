@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledH3 = styled.h3`
+	font-family: ${({ theme }) => theme.fontFamily};
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 600;

@@ -8,6 +8,7 @@ const StyledButton = styled.button`
 	height: 42px;
 	padding: 0 12px;
 	border-radius: 6px;
+	font-family: ${({ theme }) => theme.fontFamily};
 	font-size: 14px;
 	font-weight: 400;
 	cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
