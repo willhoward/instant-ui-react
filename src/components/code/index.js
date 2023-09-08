@@ -7,7 +7,7 @@ const StyledCode = styled.code`
 	background: ${({ theme }) => theme.lightGray};
 	padding: 4px;
 	border-radius: 3px;
-	font-family: monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 	line-height: 24px;
 	color: ${({ theme }) => theme.white};
 `;
